@@ -31,7 +31,6 @@ WEIGTHS_PATH = "weights/best_weights.pt"
 INPUT_TRANSFORM = Compose([
   ToTensor(),
   Resize((224, 224)),
-  #partial(torch.permute,dims=((2,0,1))),
   partial(torch.unsqueeze, dim=0),
   ],
 )
